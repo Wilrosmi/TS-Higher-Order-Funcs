@@ -7,7 +7,13 @@
  * @returns the filtered version of arr, using func
  */
 function filter<T>(arr: T[], func: (arg: T) => boolean): T[] {
-  return arr;
+  const outArr = [];
+  for (let element of arr) {
+    if (func(element)) {
+      outArr.push(element);
+    }
+  }
+  return outArr;
 }
 
 export default filter;
